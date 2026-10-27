@@ -1,6 +1,6 @@
 [project]
 name = "google-discover-api-mcp"
-version = "1.0.1"
+version = "1.0.2"
 description = "Self-hosted Google Discover feed API and MCP server: the Discover feed of your country as JSON. Noncommercial use (PolyForm Noncommercial 1.0.0)."
 readme = "README.md"
 license = "PolyForm-Noncommercial-1.0.0"
