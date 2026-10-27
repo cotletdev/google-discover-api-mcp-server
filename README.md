@@ -15,7 +15,7 @@ No Google account and no browser. It is for technical people who want to run it 
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial-141318)](https://github.com/cotletdev/google-discover-api-mcp-server/blob/main/LICENSE)
 
 ```bash
-pip install "git+https://github.com/cotletdev/google-discover-api-mcp-server.git@v1.0.1"
+pip install google-discover-api-mcp
 apkeep -a com.android.chrome -d apk-pure -o 'acknowledge_dangers=true,arch=arm64-v8a' .   # or any Chrome APK
 google-discover-mcp setup --apk "com.android.chrome@arm64-v8a.xapk"
 google-discover-mcp call get_discover_feed limit=10
@@ -63,10 +63,14 @@ AI agent (MCP) / script (REST, Python) ──▶ google-discover-mcp on your com
 
 ## Install
 
+From [PyPI](https://pypi.org/project/google-discover-api-mcp/):
+
 ```bash
-pip install "git+https://github.com/cotletdev/google-discover-api-mcp-server.git@v1.0.1"
+uv tool install google-discover-api-mcp       # or: pipx install google-discover-api-mcp, or: pip install google-discover-api-mcp
 google-discover-mcp --version
 ```
+
+MCP clients can also run it with no install: `uvx google-discover-api-mcp mcp`.
 
 From source:
 
@@ -83,7 +87,7 @@ With [uv](https://docs.astral.sh/uv/): `uv venv && uv pip install -e .`, then `u
 
 Setting it up with an AI agent (Claude Code, Codex, Cursor)? Open it in this folder and ask it to set up the repo: [`AGENTS.md`](https://github.com/cotletdev/google-discover-api-mcp-server/blob/main/AGENTS.md) tells it every step.
 
-To update: `pip install -U "git+https://github.com/cotletdev/google-discover-api-mcp-server.git"`, from source `git pull && pip install -e .`. We copy every change of the hosted tools into this repo.
+To update: `uv tool upgrade google-discover-api-mcp` (or `pip install -U google-discover-api-mcp`), from source `git pull && pip install -e .`. We copy every change of the hosted tools into this repo.
 
 ## Set up: Chrome's API key
 
@@ -142,7 +146,7 @@ The MCP server lists the 3 tools with their input schemas and descriptions writt
 ```bash
 claude mcp add google-discover -- google-discover-mcp mcp
 # without installing first:
-claude mcp add google-discover -- uvx --from "git+https://github.com/cotletdev/google-discover-api-mcp-server.git@v1.0.1" google-discover-mcp mcp
+claude mcp add google-discover -- uvx google-discover-api-mcp mcp
 ```
 
 Run `setup` once before the first call.
@@ -156,12 +160,7 @@ Run `setup` once before the first call.
   "mcpServers": {
     "google-discover": {
       "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/cotletdev/google-discover-api-mcp-server.git@v1.0.1",
-        "google-discover-mcp",
-        "mcp"
-      ]
+      "args": ["google-discover-api-mcp", "mcp"]
     }
   }
 }
@@ -178,7 +177,7 @@ Run `setup` once before the first call.
 ```toml
 [mcp_servers.google-discover]
 command = "uvx"
-args = ["--from", "git+https://github.com/cotletdev/google-discover-api-mcp-server.git@v1.0.1", "google-discover-mcp", "mcp"]
+args = ["google-discover-api-mcp", "mcp"]
 ```
 
 ### Over HTTP
