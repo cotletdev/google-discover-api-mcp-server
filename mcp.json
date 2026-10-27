@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "google-discover": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/cotletdev/google-discover-api-mcp-server.git@v1.0.1",
+        "google-discover-mcp",
+        "mcp"
+      ]
+    }
+  }
+}

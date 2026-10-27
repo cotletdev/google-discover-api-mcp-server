@@ -1,0 +1,12 @@
+.env
+settings.json
+discover-state.json
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+*.csv
+*.json
+!mcp.json
+!glama.json
