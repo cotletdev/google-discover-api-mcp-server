@@ -1,9 +1,9 @@
 [project]
 name = "google-discover-api-mcp"
-version = "1.0.2"
-description = "Self-hosted Google Discover feed API and MCP server: the Discover feed of your country as JSON. Noncommercial use (PolyForm Noncommercial 1.0.0)."
+version = "1.0.3"
+description = "Self-hosted Google Discover feed API and MCP server: the Discover feed of your country as JSON. Use Google Discover from Claude, Cursor, Codex or any MCP client or AI agent."
 readme = "README.md"
-license = "PolyForm-Noncommercial-1.0.0"
+license = "Elastic-2.0"
 license-files = ["LICENSE"]
 classifiers = ["Programming Language :: Python :: 3", "Topic :: Internet :: WWW/HTTP"]
 requires-python = ">=3.11"

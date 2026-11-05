@@ -1,4 +1,32 @@
-# Google Discover API and MCP server, self-hosted
+# Google Discover API and MCP server: the Discover feed in ChatGPT and Claude
+
+**Yes, ChatGPT, Claude and other AI agents can read the Google Discover feed.** That includes Cursor, Codex, OpenClaw and any MCP client, plus automations in n8n, Make and Zapier. Ask in plain words, and the AI reads the Google Discover feed of any country and topic, shows which publishers and stories trend and tracks your own site.
+
+This repo is the missing piece: 3 Google Discover tools for AI assistants and scripts.
+
+## What you can ask
+
+> *Is example-news.com in the Discover feed right now? Give the position, title and age of each card.*
+>
+> *Which publishers have the most cards in Discover today?*
+>
+> *List the video cards in the feed with their positions.*
+>
+> *Collect 200 Discover cards and tell me which topics most of them are about.*
+
+## Two ways to get it
+
+| | [Ready to use, at Cotlet](https://cotlet.dev/integrations/google-discover-api-mcp-server?utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=two-ways) | Run it yourself, this repo |
+|---|---|---|
+| For | publishers, SEO teams and newsrooms | developers |
+| Setup | no Google account, about 2 minutes, nothing to install | Python and a terminal |
+| Works in | ChatGPT and Claude apps, on your phone too, Cursor, Codex, OpenClaw, any MCP client, n8n, Make, Zapier, REST API | Claude Code, Claude Desktop, Cursor, Codex on your computer |
+| Runs | 24/7, your computer can be off | while your computer is on |
+| Price | 7 days free, no card | free |
+
+**[Start free at cotlet.dev →](https://cotlet.dev/signup?app=google-discover&utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=top-button)**
+
+## Run it yourself
 
 A **Google Discover API** and a **Google Discover MCP server** you run on your own computer, in Python. It reads the Discover feed that Chrome for Android shows on its New Tab page to someone not signed in to Google, and gives you every card as JSON: position, title, publisher, URL, domain, article or video, age and image. The same 3 tools we run in production at [Cotlet](https://cotlet.dev/integrations/google-discover-api-mcp-server).
 
@@ -8,11 +36,11 @@ Google has no API for the Discover feed. The Discover report in Search Console c
 - **REST API** on `http://127.0.0.1:8787/api/v1/google-discover`, with OpenAPI docs at `/docs`. [Setup](#rest-api)
 - **Python**: `call("check_domain_in_feed", domain="example-news.com")`, plus 7 ready scripts in [`examples/`](https://github.com/cotletdev/google-discover-api-mcp-server/blob/main/examples/).
 
-No Google account and no browser. It is for technical people who want to run it themselves, **for noncommercial use only** ([license](#license)). If you want the feed of any country without a proxy of your own, on a schedule in the cloud, for a team or a business, use the [hosted version at cotlet.dev](https://cotlet.dev/integrations/google-discover-api-mcp-server).
+No Google account and no browser. Free for your own use, your own business included ([license](#license)).
 
 [![Google Discover MCP server](https://img.shields.io/badge/Google%20Discover%20MCP-3%20tools-6d4aef)](#all-3-tools)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-141318)](#requirements)
-[![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/license-PolyForm%20Noncommercial-141318)](https://github.com/cotletdev/google-discover-api-mcp-server/blob/main/LICENSE)
+[![License: Elastic 2.0](https://img.shields.io/badge/license-Elastic%202.0-141318)](https://github.com/cotletdev/google-discover-api-mcp-server/blob/main/LICENSE)
 
 ```bash
 pip install google-discover-api-mcp
@@ -24,6 +52,7 @@ claude mcp add google-discover -- google-discover-mcp mcp
 
 ## Contents
 
+- [Questions from Google Discover users](#questions-from-google-discover-users)
 - [How it works](#how-it-works)
 - [Requirements](#requirements)
 - [Install](#install)
@@ -39,6 +68,41 @@ claude mcp add google-discover -- google-discover-mcp mcp
 - [Self-hosted or hosted](#self-hosted-or-hosted)
 - [FAQ](#faq)
 - [License](#license)
+
+## Questions from Google Discover users
+
+**Does Google Discover have an API?**
+No. Google has no API for the Discover feed. The only official Discover data is the Discover report in Search Console, with clicks and impressions for sites you own. This repo and [Cotlet](https://cotlet.dev/integrations/google-discover-api-mcp-server?utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=faq-api) give you 3 Google Discover tools as a REST API and an MCP server.
+
+**Can I get a Google Discover API key?**
+Not from Google, because there is no Discover API. With Cotlet you get your own API key for the Discover feed, for scripts, n8n, Make, Zapier or any HTTP client.
+
+**Is there an official ChatGPT integration for Google Discover?**
+No. Google has no Discover connector for ChatGPT or Claude. Cotlet gives ChatGPT, Claude and other AI agents the live Discover feed of any country.
+
+**How do I get Google Discover into ChatGPT?**
+Sign up at [cotlet.dev](https://cotlet.dev/signup?app=google-discover&utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=faq-chatgpt) and add Cotlet to ChatGPT, following the steps in your account. No Google account is needed. ChatGPT needs a server on the internet, so this repo alone, running on your computer, does not connect to ChatGPT.
+
+**Can ChatGPT show me what is trending in Google Discover?**
+Yes, with Cotlet. Ask for today's Discover feed in a country and topic, and it lists the stories, publishers and images, and spots your own site.
+
+**Can I automate Google Discover with Zapier, Make or n8n?**
+Through Cotlet, n8n, Make and Zapier can pull the Discover feed on a schedule into a sheet, Slack or your CMS.
+
+**Can I use it from my phone?**
+Yes, with Cotlet: once it is set up, the ChatGPT and Claude apps on your phone can use Google Discover for you.
+
+**Do I need to be technical?**
+For Cotlet, no: you add Cotlet to ChatGPT or Claude, with step-by-step instructions in your account. This repo is for people who are fine with Python and a terminal.
+
+**Do I need a Google account?**
+No. Neither Cotlet nor this repo signs in to Google. The feed is read the way a phone in that country sees it.
+
+**Is it free?**
+This repo is free, also in your own business. Cotlet is free for 7 days with no card, then one-time credit packs from $29, no subscription. [Pricing](https://cotlet.dev/pricing?utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=faq-price).
+
+**Can I watch several countries?**
+Yes, with Cotlet: each request takes a country and a language, so one account covers every market you follow.
 
 ## How it works
 
@@ -311,7 +375,7 @@ The REST API answers `{"error": "<code>", "message": "..."}`. The MCP server ret
 
 ## Self-hosted or hosted
 
-| | This repo | [Cotlet, hosted](https://cotlet.dev/integrations/google-discover-api-mcp-server) |
+| | This repo | [Cotlet, hosted](https://cotlet.dev/integrations/google-discover-api-mcp-server?utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=compare) |
 |---|---|---|
 | Tools | the same 3 | the same 3 |
 | Runs | on your computer, while it is on | in the cloud, 24/7 |
@@ -319,15 +383,12 @@ The REST API answers `{"error": "<code>", "message": "..."}`. The MCP server ret
 | API key | from a Chrome APK you download, renewed by you | kept working for you, the feed tested daily |
 | `collect_discover_cards` | reads from your IP or proxy | each read from another home IP in the country |
 | Works with | MCP clients on your machine, local scripts | Claude.ai and ChatGPT connectors, n8n, Make, any HTTP client |
-| Who may use it | you, for noncommercial use | teams, businesses, agencies |
+| Who may use it | you and your own business | you, teams, businesses, agencies |
 | Price | free | free 7-day trial with 2,000 credits, no card; then one-time packs from $29 for 5,000 credits |
 
 On the hosted version a successful read uses 10 credits, failed calls are free, and there is no Cloud Browser or account to pay for. `collect_discover_cards` makes many reads and costs more. [Full pricing](https://cotlet.dev/pricing).
 
 ## FAQ
-
-**Does Google Discover have an API?**
-No. Google has no API for the Discover feed. The only official Discover data is the Discover report in Search Console, with clicks and impressions for sites you own. Details: [cotlet.dev/integrations/google-discover-api-mcp-server](https://cotlet.dev/integrations/google-discover-api-mcp-server).
 
 **Is there a Google Discover MCP server for Claude, ChatGPT or Cursor?**
 Yes, this one runs on your machine: `google-discover-mcp mcp` for Claude Code, Claude Desktop, Cursor and Codex. ChatGPT and Claude.ai connectors need a public HTTPS URL, which the [hosted Google Discover MCP server](https://cotlet.dev/integrations/google-discover-api-mcp-server) gives you.
@@ -351,20 +412,20 @@ It is Chrome's key, not ours. Google can switch off a key it finds on GitHub, an
 Yes. Run `setup` there, or set `GOOGLE_DISCOVER_API_KEY`. The feed then follows the server's IP; a proxy gets you the countries you want.
 
 **Can I use it at work or for my clients?**
-No, the license allows noncommercial use only. For a team, a company or client work, use [Cotlet](https://cotlet.dev) or write to [contact@cotlet.dev](mailto:contact@cotlet.dev).
+At work and in your own business, yes, free. You may not offer it to others as a hosted or managed service. For client work, use [Cotlet](https://cotlet.dev?utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=faq-clients) or write to [contact@cotlet.dev](mailto:contact@cotlet.dev).
 
 **Is it open source?**
-The source is public, the license is not an open source license: noncommercial use only, no business use.
+The source is public under the Elastic License 2.0: free to use and change, also in your own business, but not to resell as a hosted service.
 
 **A tool broke or I need another one.**
 [Open an issue](https://github.com/cotletdev/google-discover-api-mcp-server/issues) with the tool name and the error message.
 
 ## License
 
-[PolyForm Noncommercial License 1.0.0](https://github.com/cotletdev/google-discover-api-mcp-server/blob/main/LICENSE). In short:
+[Elastic License 2.0](https://github.com/cotletdev/google-discover-api-mcp-server/blob/main/LICENSE). In short:
 
-- **Allowed:** noncommercial use: you, for your own personal purposes, or a charity, school, public research or government body. Changing the code, and sharing it under the same license.
-- **Not allowed:** any commercial use, your own business included; client work; selling or offering it, or a service built on it.
+- **Allowed:** using it for yourself and in your own business, free. Changing the code and sharing it under the same license.
+- **Not allowed:** offering it to others as a hosted or managed service, removing the license notices, getting around its limits.
 
 ---
 
@@ -377,4 +438,4 @@ The source is public, the license is not an open source license: noncommercial u
   </a>
 </p>
 
-Maintained by [Cotlet](https://cotlet.dev) ([@cotletdev](https://x.com/cotletdev)). Google, Google Discover and Chrome are trademarks of Google LLC. This project is unofficial and not affiliated with, endorsed or sponsored by Google.
+Maintained by [Cotlet](https://cotlet.dev?utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=footer) ([@cotletdev](https://x.com/cotletdev)). Google, Google Discover and Chrome are trademarks of Google LLC. This project is unofficial and not affiliated with, endorsed or sponsored by Google.
