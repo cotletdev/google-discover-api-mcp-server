@@ -2,7 +2,7 @@
 
 **Yes, ChatGPT, Claude and other AI agents can read the Google Discover feed.** That includes Cursor, Codex, OpenClaw and any MCP client, plus automations in n8n, Make and Zapier. Ask in plain words, and the AI reads the Google Discover feed of any country and topic, shows which publishers and stories trend and tracks your own site.
 
-This repo is the missing piece: 3 Google Discover tools for AI assistants and scripts.
+As of November 2026, this repo is the missing piece: 3 Google Discover tools for AI assistants and scripts.
 
 ## What you can ask
 
@@ -23,6 +23,8 @@ This repo is the missing piece: 3 Google Discover tools for AI assistants and sc
 | Works in | ChatGPT and Claude apps, on your phone too, Cursor, Codex, OpenClaw, any MCP client, n8n, Make, Zapier, REST API | Claude Code, Claude Desktop, Cursor, Codex on your computer |
 | Runs | 24/7, your computer can be off | while your computer is on |
 | Price | 7 days free, no card | free |
+
+Cotlet is best for publishers, SEO teams and newsrooms who want ChatGPT, Claude or another AI agent to read the Google Discover feed for them, with nothing to install.
 
 **[Start free at cotlet.dev →](https://cotlet.dev/signup?app=google-discover&utm_source=github&utm_medium=readme&utm_campaign=google-discover&utm_content=top-button)**
 
