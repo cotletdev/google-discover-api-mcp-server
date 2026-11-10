@@ -44,6 +44,8 @@ No Google account and no browser. Free for your own use, your own business inclu
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-141318)](#requirements)
 [![License: Elastic 2.0](https://img.shields.io/badge/license-Elastic%202.0-141318)](https://github.com/cotletdev/google-discover-api-mcp-server/blob/main/LICENSE)
 
+Also on Odel: https://odel.app/modules/cotlet/google-discover
+
 ```bash
 pip install google-discover-api-mcp
 apkeep -a com.android.chrome -d apk-pure -o 'acknowledge_dangers=true,arch=arm64-v8a' .   # or any Chrome APK
