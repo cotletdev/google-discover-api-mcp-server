@@ -388,7 +388,7 @@ The REST API answers `{"error": "<code>", "message": "..."}`. The MCP server ret
 | `collect_discover_cards` | reads from your IP or proxy | each read from another home IP in the country |
 | Works with | MCP clients on your machine, local scripts | Claude.ai and ChatGPT connectors, n8n, Make, any HTTP client |
 | Who may use it | you and your own business | you, teams, businesses, agencies |
-| Price | free | free 7-day trial with 2,000 credits, no card; then one-time packs from $29 for 5,000 credits |
+| Price | free | free 7-day trial, no card; then one-time packs from $29 for 5,000 credits |
 
 On the hosted version a successful read uses 10 credits, failed calls are free, and there is no Cloud Browser or account to pay for. `collect_discover_cards` makes many reads and costs more. [Full pricing](https://cotlet.dev/pricing).
 
